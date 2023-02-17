@@ -1,0 +1,3 @@
+[submodule "web-shared-components"]
+	path = web-shared-components
+	url = git@github.com:SU-UTB/web-shared-components.git
