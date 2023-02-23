@@ -1,7 +1,7 @@
-import TNavbarItem from '../../../../lib/types/TNavbarItem';
+import TLinkItem from '../../../../lib/types/TLinkItem';
 import { NavListItem } from './NavItem.styled';
 
-const NavItem = ({ link, text }: TNavbarItem) => {
+const NavItem = ({ link, text }: TLinkItem) => {
   return (
     <NavListItem>
       <a href={link}>{text}</a>

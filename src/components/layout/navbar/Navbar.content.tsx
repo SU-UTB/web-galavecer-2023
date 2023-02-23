@@ -1,4 +1,4 @@
-import TNavbarItem from '../../../lib/types/TNavbarItem';
+import TNavbarItem from '../../../lib/types/TLinkItem';
 
 // TODO: Not a final version - the texts and links might be changed in the future
 

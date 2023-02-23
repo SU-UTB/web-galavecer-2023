@@ -1,3 +1,4 @@
+import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 
 interface Props {
@@ -9,6 +10,7 @@ const Layout = ({ children }: Props) => {
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 };

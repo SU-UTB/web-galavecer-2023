@@ -1,7 +1,7 @@
 import Logo from './logo/Logo';
 import { navbarItems } from './Navbar.content';
 import { Nav } from './Navbar.styled';
-import NavItem from './NavItem/NavItem';
+import NavItem from './navItem/NavItem';
 
 const Navbar = () => {
   return (
