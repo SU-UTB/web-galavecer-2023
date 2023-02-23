@@ -1,16 +1,18 @@
+import Logo from './logo/Logo';
 import { navbarItems } from './Navbar.content';
+import { Nav } from './Navbar.styled';
+import NavItem from './NavItem/NavItem';
 
 const Navbar = () => {
   return (
-    <nav>
+    <Nav>
+      <Logo />
       <ul>
         {navbarItems.map(({ link, text }) => (
-          <li key={link}>
-            <a href={link}>{text}</a>
-          </li>
+          <NavItem key={link} link={link} text={text} />
         ))}
       </ul>
-    </nav>
+    </Nav>
   );
 };
 
