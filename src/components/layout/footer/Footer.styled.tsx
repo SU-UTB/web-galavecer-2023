@@ -8,5 +8,9 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 4rem 2rem;
+  }
 `;

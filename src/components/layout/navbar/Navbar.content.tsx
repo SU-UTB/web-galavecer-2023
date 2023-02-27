@@ -15,8 +15,4 @@ export const navbarItems: TNavbarItem[] = [
     text: 'Osobní údaje',
     link: '/osobni-udaje',
   },
-  {
-    text: 'Partneři',
-    link: '/partneri',
-  },
 ];

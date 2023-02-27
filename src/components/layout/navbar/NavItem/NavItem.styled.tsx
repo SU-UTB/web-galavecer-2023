@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
 export const NavListItem = styled.li`
-  margin: 0 0.5rem;
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 `;

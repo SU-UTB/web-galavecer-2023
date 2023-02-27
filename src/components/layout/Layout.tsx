@@ -1,3 +1,4 @@
+import { Container } from '../Container.styled';
 import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 
@@ -9,7 +10,9 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Navbar />
-      {children}
+      <main>
+        <Container>{children}</Container>
+      </main>
       <Footer />
     </>
   );
