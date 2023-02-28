@@ -1,4 +1,4 @@
-import TLinkItem from '../../../../lib/types/TLinkItem';
+import TLinkItem from '../../../lib/types/TLinkItem';
 import { NavListItem } from './NavItem.styled';
 
 const NavItem = ({ link, text }: TLinkItem) => {
