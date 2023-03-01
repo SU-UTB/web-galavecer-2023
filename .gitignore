@@ -24,7 +24,6 @@ dist-ssr
 *.sw?
 *.lo
 yarn.lock
-package-lock.json
 
 
 .firebase
