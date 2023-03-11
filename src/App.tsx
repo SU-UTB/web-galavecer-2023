@@ -1,6 +1,8 @@
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import Layout from './components/layout/Layout';
+import Routes from './Routes';
 
 import GlobalStyle from './styles/globals';
 import Theme from './styles/theme';
@@ -9,9 +11,11 @@ const App = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <Layout>
-        <h1>Galavecer 2023</h1>
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <Routes />
+        </Layout>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
