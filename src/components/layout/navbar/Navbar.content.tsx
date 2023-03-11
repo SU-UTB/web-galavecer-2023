@@ -1,18 +1,20 @@
 import TNavbarItem from '../../../lib/types/TLinkItem';
 
-// TODO: Not a final version - the texts and links might be changed in the future
-
 export const navbarItems: TNavbarItem[] = [
   {
-    text: 'O Galavečeru',
+    text: 'o galavečeru',
     link: '/o-galaveceru',
   },
   {
-    text: 'Pravidla',
+    text: 'pravidla',
     link: '/pravidla',
   },
   {
-    text: 'Osobní údaje',
+    text: 'osobní údaje',
     link: '/osobni-udaje',
+  },
+  {
+    text: 'partneři',
+    link: '/partneri',
   },
 ];
