@@ -2,8 +2,10 @@ const Theme = {
   colors: {
     primary: '#FFFFFF',
     secondary: '#EEEEEE',
-    header: '#EEEEEE',
-    footer: '#CCCCCC',
+    header:
+      'linear-gradient(180deg, rgba(0, 0, 0, 0.74) 31.56%, rgba(0, 0, 0, 0) 100%);',
+    footer:
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);',
     body: '#FFFFFF',
   },
   breakpoints: {

@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background-color: ${({ theme }) => theme.colors.body};
+    background: url('../src/assets/img/bg-desktop.jpg') no-repeat top;
     font-family: ${({ theme }) => theme.fontFamilies.medium};
+    color: ${({ theme }) => theme.colors.body}
   }
 `;
 
