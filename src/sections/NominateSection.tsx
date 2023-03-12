@@ -1,12 +1,12 @@
 import VoteLink from '../components/actionLink/VoteLink';
 import { StyledVoteSection } from './Sections.styled';
 
-const VoteSection = () => {
+const NominateSection = () => {
   return (
-    <StyledVoteSection id="hlasuj">
+    <StyledVoteSection id="nominuj">
       <VoteLink />
       <p>
-        Hlasování končí 28. 3. 2023
+        Nominace končí 21.3. 2023
         <br />
         ve 12:00 h
       </p>
@@ -14,4 +14,4 @@ const VoteSection = () => {
   );
 };
 
-export default VoteSection;
+export default NominateSection;

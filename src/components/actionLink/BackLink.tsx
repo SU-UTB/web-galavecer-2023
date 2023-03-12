@@ -1,5 +1,5 @@
 import BackArrowImg from '../assets/img/icons/arrow-back.svg';
-import { StyledActionLink } from './voteLink/StyledActionLink.styled';
+import { StyledActionLink } from './StyledActionLink.styled';
 
 const BackLink = () => {
   return (

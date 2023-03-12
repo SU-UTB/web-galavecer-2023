@@ -4,7 +4,7 @@ import {
   SecondaryHeading,
 } from '../components/headline/Headline.styled';
 import { MainLogoImg } from '../components/logo/Logo.styled';
-import VoteSection from '../sections/VoteSection';
+import NominateSection from '../sections/NominateSection';
 
 const MainPage = () => {
   return (
@@ -16,7 +16,7 @@ const MainPage = () => {
         <span>11.4.2023</span>
       </MainHeading>
       <SecondaryHeading>Projdi se po červeném koberci!</SecondaryHeading>
-      <VoteSection />
+      <NominateSection />
     </>
   );
 };
