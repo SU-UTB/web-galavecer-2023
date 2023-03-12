@@ -11,6 +11,7 @@ export const MainHeading = styled.h1`
   flex-direction: column;
   align-items: center;
   position: relative;
+  letter-spacing: 2px;
 
   .hidden {
     display: none;
@@ -28,4 +29,6 @@ export const SecondaryHeading = styled.h2`
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.headingSizes.h2.desktop};
   }
+
+  letter-spacing: 2px;
 `;
