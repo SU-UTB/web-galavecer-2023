@@ -25,6 +25,25 @@ export const StyledRulesSection = styled.section`
   }
 `;
 
+export const StyledPersonalInfoSection = styled.section`
+  padding: 0 2rem;
+  max-width: ${({ theme }) => theme.breakpoints.desktop};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 70vh;
+    overflow-y: scroll;
+  }
+
+  ol {
+    margin: 2rem 0;
+    max-width: 100%;
+    list-style-type: upper-roman;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
 export const ImportantText = styled.span`
   color: #ff5b5b;
 `;
