@@ -44,6 +44,40 @@ export const StyledPersonalInfoSection = styled.section`
   }
 `;
 
+export const StyledPartnersSection = styled.section`
+  max-width: ${({ theme }) => theme.breakpoints.desktop};
+  margin: 3rem 0 8rem;
+  background-color: #ffffff;
+  border-radius: 23px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 3rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      padding: 3rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+`;
+
 export const ImportantText = styled.span`
   color: #ff5b5b;
 `;
