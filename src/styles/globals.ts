@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     font-family: ${({ theme }) => theme.fontFamilies.medium};
     color: ${({ theme }) => theme.colors.body};
+    font-size: 16px;
   }
 `;
 
