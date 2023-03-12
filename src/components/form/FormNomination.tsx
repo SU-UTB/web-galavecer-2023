@@ -38,7 +38,7 @@ const FormNomination = () => {
       <div>
         <StyledInput
           type="text"
-          name="name"
+          name="firstNameNominated"
           placeholder="Jméno nominovaného"
           required
           value={data.firstNameNominated}
@@ -46,7 +46,7 @@ const FormNomination = () => {
         />
         <StyledInput
           type="text"
-          name="name"
+          name="lastNameNominated"
           placeholder="Příjmení nominovaného"
           required
           value={data.lastNameNominated}
@@ -55,8 +55,8 @@ const FormNomination = () => {
       </div>
       <div>
         <StyledSelect
-          name="faculty"
-          id="faculty"
+          name="facultyNominated"
+          id="facultyNominated"
           required
           value={data.facultyNominated}
           onChange={(e) =>
@@ -87,6 +87,8 @@ const FormNomination = () => {
         <StyledInput
           type="text"
           placeholder="Jméno"
+          name="firstName"
+          id="firstName"
           required
           value={data.firstName}
           onChange={(e) => updateFields({ firstName: e.target.value })}
@@ -94,6 +96,8 @@ const FormNomination = () => {
         <StyledInput
           type="text"
           placeholder="Příjmení"
+          name="lastName"
+          id="lastName"
           required
           value={data.lastName}
           onChange={(e) => updateFields({ lastName: e.target.value })}
@@ -103,6 +107,7 @@ const FormNomination = () => {
         <StyledInput
           type="email"
           name="email"
+          id="email"
           placeholder="Univerzitní e-mail"
           required
           value={data.email}
