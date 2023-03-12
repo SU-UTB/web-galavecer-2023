@@ -6,7 +6,7 @@ export const LogoLink = styled.a`
   cursor: pointer;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    max-height: 100px;
   }
 `;
