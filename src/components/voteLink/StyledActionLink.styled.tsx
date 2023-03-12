@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const StyledVoteLink = styled(Link)`
+type Props = {
+  paddingXVal?: number;
+  paddingYVal?: number;
+};
+
+export const StyledActionLink = styled(Link)<Props>`
   background: #ffffff;
   color: #000000;
   text-align: center;
-  padding: 1rem 1.8rem;
+  padding: ${({ paddingXVal }) => paddingXVal || 1}rem
+    ${({ paddingYVal }) => paddingYVal || 1.8}rem;
   border-radius: 23px;
   letter-spacing: 2px;
   text-transform: uppercase;

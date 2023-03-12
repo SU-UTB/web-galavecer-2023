@@ -12,3 +12,19 @@ export const StyledVoteSection = styled.section`
     letter-spacing: 2px;
   }
 `;
+
+export const StyledRulesSection = styled.section`
+  padding: 0 1rem;
+
+  ol {
+    margin: 2rem 0;
+    list-style-type: upper-roman;
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
+export const ImportantText = styled.span`
+  color: #ff5b5b;
+`;

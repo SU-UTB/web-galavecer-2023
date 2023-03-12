@@ -12,6 +12,7 @@ export const MainHeading = styled.h1`
   align-items: center;
   position: relative;
   letter-spacing: 2px;
+  text-align: center;
 
   .hidden {
     display: none;

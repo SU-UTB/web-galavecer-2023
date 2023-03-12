@@ -1,7 +1,7 @@
-import { StyledVoteLink } from './StyledVoteLink.styled';
+import { StyledActionLink } from './StyledActionLink.styled';
 
 const VoteLink = () => {
-  return <StyledVoteLink to="/nominace">Hlasuj</StyledVoteLink>;
+  return <StyledActionLink to="/nominace">Hlasuj</StyledActionLink>;
 };
 
 export default VoteLink;
