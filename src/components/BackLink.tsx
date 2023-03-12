@@ -3,7 +3,7 @@ import { StyledActionLink } from './voteLink/StyledActionLink.styled';
 
 const BackLink = () => {
   return (
-    <StyledActionLink to="/">
+    <StyledActionLink to="/" desktopHidden={true}>
       <img src={BackArrowImg} alt="šipka zpátky" />
     </StyledActionLink>
   );

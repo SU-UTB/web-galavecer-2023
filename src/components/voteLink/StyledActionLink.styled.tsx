@@ -4,6 +4,7 @@ import styled from 'styled-components';
 type Props = {
   paddingXVal?: number;
   paddingYVal?: number;
+  desktopHidden?: boolean;
 };
 
 export const StyledActionLink = styled(Link)<Props>`
@@ -21,6 +22,8 @@ export const StyledActionLink = styled(Link)<Props>`
   font-size: 36px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: ${({ desktopHidden }) =>
+      desktopHidden ? 'none' : 'inline-block'};
     font-size: 46px;
   }
 `;
