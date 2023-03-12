@@ -1,8 +1,8 @@
 import SocialItem from './SocialItem';
 import { SocialsContainer } from './Socials.styled';
 
-import fbIcon from '../../../../assets/img/icons/fb_w.svg';
-import igIcon from '../../../../assets/img/icons/ig_w.svg';
+import fbIcon from '../../../../assets/img/icons/fb-w.svg';
+import igIcon from '../../../../assets/img/icons/ig-w.svg';
 
 const Socials = () => {
   return (

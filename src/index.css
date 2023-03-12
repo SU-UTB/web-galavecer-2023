@@ -1,5 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: ClashDisplayRegular;
+  src: url('./assets/fonts/ClashDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ClashDisplayMedium;
+  src: url('./assets/fonts/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
 }

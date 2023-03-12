@@ -20,5 +20,9 @@ declare module 'styled-components' {
       h5: string;
       h6: string;
     };
+    fontFamilies: {
+      regular: string;
+      medium: string;
+    };
   }
 }

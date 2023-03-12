@@ -19,6 +19,10 @@ const Theme = {
     h5: '1.25rem',
     h6: '1rem',
   },
+  fontFamilies: {
+    regular: 'ClashDisplayRegular',
+    medium: 'ClashDisplayMedium',
+  },
 };
 
 export default Theme;
