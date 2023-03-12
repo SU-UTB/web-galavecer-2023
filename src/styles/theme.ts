@@ -14,12 +14,30 @@ const Theme = {
     desktop: '1024px',
   },
   headingSizes: {
-    h1: '2.5rem',
-    h2: '2rem',
-    h3: '1.75rem',
-    h4: '1.5rem',
-    h5: '1.25rem',
-    h6: '1rem',
+    h1: {
+      mobile: '20px',
+      desktop: '40px',
+    },
+    h2: {
+      mobile: '30px',
+      desktop: '50px',
+    },
+    h3: {
+      mobile: '18px',
+      desktop: '30px',
+    },
+    h4: {
+      mobile: '18px',
+      desktop: '28px',
+    },
+    h5: {
+      mobile: '18px',
+      desktop: '26px',
+    },
+    h6: {
+      mobile: '18px',
+      desktop: '24px',
+    },
   },
   fontFamilies: {
     regular: 'ClashDisplayRegular',
