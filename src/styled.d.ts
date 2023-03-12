@@ -41,6 +41,7 @@ declare module 'styled-components' {
     fontFamilies: {
       regular: string;
       medium: string;
+      semibold: string;
     };
   }
 }

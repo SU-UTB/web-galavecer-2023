@@ -42,6 +42,7 @@ const Theme = {
   fontFamilies: {
     regular: 'ClashDisplayRegular',
     medium: 'ClashDisplayMedium',
+    semibold: 'ClashDisplaySemibold',
   },
 };
 

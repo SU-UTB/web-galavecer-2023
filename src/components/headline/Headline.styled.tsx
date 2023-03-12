@@ -25,10 +25,10 @@ export const MainHeading = styled.h1`
 
 export const SecondaryHeading = styled.h2`
   font-size: ${({ theme }) => theme.headingSizes.h2.mobile};
+  letter-spacing: 2px;
+  text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.headingSizes.h2.desktop};
   }
-
-  letter-spacing: 2px;
 `;

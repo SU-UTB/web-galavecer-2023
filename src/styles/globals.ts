@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: url('../src/assets/img/bg-desktop.jpg') no-repeat top;
+    background-size: cover;
     font-family: ${({ theme }) => theme.fontFamilies.medium};
     color: ${({ theme }) => theme.colors.body};
   }
