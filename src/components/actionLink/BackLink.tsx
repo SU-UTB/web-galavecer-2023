@@ -1,4 +1,4 @@
-import BackArrowImg from '../assets/img/icons/arrow-back.svg';
+import BackArrowImg from '../../assets/img/icons/arrow-back.svg';
 import { StyledActionLink } from './StyledActionLink.styled';
 
 const BackLink = () => {
