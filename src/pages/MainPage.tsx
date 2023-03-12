@@ -1,7 +1,10 @@
+import LogoImg from '../assets/img/logo.svg';
+import { MainLogoImg } from '../components/logo/Logo.styled';
+
 const MainPage = () => {
   return (
     <>
-      <h1>Mainpage</h1>
+      <MainLogoImg src={LogoImg} alt="Galavečer 2023 logo" />
     </>
   );
 };

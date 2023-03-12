@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LogoLink = styled.a`
+export const MenuLogoLink = styled.a`
   display: block;
   text-decoration: none;
   cursor: pointer;
@@ -9,4 +9,9 @@ export const LogoLink = styled.a`
     width: auto;
     max-height: 100px;
   }
+`;
+
+export const MainLogoImg = styled.img`
+  width: auto;
+  height: 40vh;
 `;
