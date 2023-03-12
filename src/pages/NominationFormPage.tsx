@@ -1,5 +1,11 @@
+import FormNomination from '../components/form/FormNomination';
+
 const NominationFormPage = () => {
-  return <h1>NominationFormPage</h1>;
+  return (
+    <>
+      <FormNomination />
+    </>
+  );
 };
 
 export default NominationFormPage;
