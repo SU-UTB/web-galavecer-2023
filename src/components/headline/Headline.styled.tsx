@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const MainHeading = styled.h1`
+  font-family: ${({ theme }) => theme.fontFamilies.headlineRegular};
   font-size: ${({ theme }) => theme.headingSizes.h1.mobile};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -25,6 +26,7 @@ export const MainHeading = styled.h1`
 `;
 
 export const SecondaryHeading = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamilies.headlineRegular};
   font-size: ${({ theme }) => theme.headingSizes.h2.mobile};
   letter-spacing: 2px;
   text-align: center;

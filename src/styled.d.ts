@@ -39,9 +39,10 @@ declare module 'styled-components' {
       };
     };
     fontFamilies: {
-      regular: string;
-      medium: string;
-      semibold: string;
+      headlineRegular: string;
+      headlineSemibold: string;
+      textRegular: string;
+      textMedium: string;
     };
   }
 }

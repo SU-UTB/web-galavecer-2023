@@ -40,9 +40,10 @@ const Theme = {
     },
   },
   fontFamilies: {
-    regular: 'ClashDisplayRegular',
-    medium: 'ClashDisplayMedium',
-    semibold: 'ClashDisplaySemibold',
+    headlineRegular: 'ClashDisplayRegular',
+    headlineSemibold: 'ClashDisplaySemibold',
+    textRegular: 'ClashGroteskRegular',
+    textMedium: 'ClashGroteskMedium',
   },
 };
 

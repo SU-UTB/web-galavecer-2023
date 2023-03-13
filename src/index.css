@@ -5,13 +5,19 @@
 }
 
 @font-face {
-  font-family: ClashDisplayMedium;
-  src: url('./assets/fonts/ClashDisplay-Medium.woff2') format('woff2');
-  font-weight: 500;
-}
-
-@font-face {
   font-family: ClashDisplaySemibold;
   src: url('./assets/fonts/ClashDisplay-Semibold.woff2') format('woff2');
   font-weight: 600;
+}
+
+@font-face {
+  font-family: ClashGroteskRegular;
+  src: url('./assets/fonts/ClashGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ClashGroteskMedium;
+  src: url('./assets/fonts/ClashGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
 }

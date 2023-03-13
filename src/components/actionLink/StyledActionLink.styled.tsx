@@ -18,8 +18,9 @@ export const StyledActionLink = styled(Link)<Props>`
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  font-family: ${({ theme }) => theme.fontFamilies.semibold};
+  font-family: ${({ theme }) => theme.fontFamilies.headlineSemibold};
   font-size: 36px;
+  font-weight: 600;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: ${({ desktopHidden }) =>

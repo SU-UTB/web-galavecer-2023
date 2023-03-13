@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledForm = styled.form`
-  font-family: ${({ theme }) => theme.fontFamilies.medium}
+  font-family: ${({ theme }) => theme.fontFamilies.headlineRegular}
   width: 100%;
   max-width: ${({ theme }) => theme.breakpoints.desktop};
   display: flex;

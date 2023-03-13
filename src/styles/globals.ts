@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: url('../src/assets/img/bg-desktop.jpg') no-repeat top;
     background-size: cover;
-    font-family: ${({ theme }) => theme.fontFamilies.medium};
+    font-family: ${({ theme }) => theme.fontFamilies.textMedium};
     color: ${({ theme }) => theme.colors.body};
     font-size: 16px;
   }
