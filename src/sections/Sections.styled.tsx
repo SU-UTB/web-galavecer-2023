@@ -19,8 +19,20 @@ export const StyledRulesSection = styled.section`
   ol {
     margin: 2rem 0;
     list-style-type: upper-roman;
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 2rem;
+      justify-content: center;
+      align-items: center;
+      max-width: ${({ theme }) => theme.breakpoints.desktop};
+    }
     li {
       margin-bottom: 1rem;
+      @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        width: 30%;
+      }
     }
   }
 `;
