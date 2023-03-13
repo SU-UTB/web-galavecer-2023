@@ -4,6 +4,7 @@ import {
   SecondaryHeading,
 } from '../components/headline/Headline.styled';
 import { MainLogoImg } from '../components/logo/Logo.styled';
+import AboutSection from '../sections/AboutSection';
 import NominateSection from '../sections/NominateSection';
 
 const MainPage = () => {
@@ -17,6 +18,7 @@ const MainPage = () => {
       </MainHeading>
       <SecondaryHeading>Projdi se po červeném koberci!</SecondaryHeading>
       <NominateSection />
+      <AboutSection />
     </>
   );
 };

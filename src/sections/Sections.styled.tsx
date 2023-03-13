@@ -88,6 +88,15 @@ export const StyledPartnersSection = styled.section`
   }
 `;
 
+export const StyledAboutSection = styled.section`
+  max-width: ${({ theme }) => theme.breakpoints.desktop};
+  margin: 2rem 0;
+
+  p {
+    line-height: 1.4;
+  }
+`;
+
 export const ImportantText = styled.span`
   color: #ff5b5b;
 `;
