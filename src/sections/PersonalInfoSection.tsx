@@ -1,8 +1,12 @@
+import { SecondaryHeading } from '../components/headline/Headline.styled';
 import { ImportantText, StyledPersonalInfoSection } from './Sections.styled';
 
 const PersonalInfoSection = () => {
   return (
     <StyledPersonalInfoSection id="osobni udaje">
+      <SecondaryHeading desktopHidden={true}>
+        Zásady ochrany osobních údajů Galavečer 2023
+      </SecondaryHeading>
       <ol>
         <li>
           <ImportantText>Základní ustanovení</ImportantText>
