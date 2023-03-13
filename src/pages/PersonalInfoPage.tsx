@@ -1,5 +1,13 @@
+import BackLink from '../components/actionLink/BackLink';
+import PersonalInfoSection from '../sections/PersonalInfoSection';
+
 const PersonalInfoPage = () => {
-  return <h1>PersonalInfoPage</h1>;
+  return (
+    <>
+      <PersonalInfoSection />
+      <BackLink />
+    </>
+  );
 };
 
 export default PersonalInfoPage;

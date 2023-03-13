@@ -13,12 +13,36 @@ declare module 'styled-components' {
       desktop: string;
     };
     headingSizes: {
-      h1: string;
-      h2: string;
-      h3: string;
-      h4: string;
-      h5: string;
-      h6: string;
+      h1: {
+        mobile: string;
+        desktop: string;
+      };
+      h2: {
+        mobile: string;
+        desktop: string;
+      };
+      h3: {
+        mobile: string;
+        desktop: string;
+      };
+      h4: {
+        mobile: string;
+        desktop: string;
+      };
+      h5: {
+        mobile: string;
+        desktop: string;
+      };
+      h6: {
+        mobile: string;
+        desktop: string;
+      };
+    };
+    fontFamilies: {
+      headlineRegular: string;
+      headlineSemibold: string;
+      textRegular: string;
+      textMedium: string;
     };
   }
 }

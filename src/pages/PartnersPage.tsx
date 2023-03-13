@@ -1,5 +1,7 @@
+import PartnersSection from '../sections/PartnersSection';
+
 const PartnersPage = () => {
-  return <h1>PartnersPage</h1>;
+  return <PartnersSection />;
 };
 
 export default PartnersPage;
