@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.body};
     font-size: 16px;
   }
+
+  img {
+    max-width: 100%;
+  }
 `;
 
 export default GlobalStyle;

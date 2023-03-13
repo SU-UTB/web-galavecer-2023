@@ -57,18 +57,15 @@ export const StyledPersonalInfoSection = styled.section`
 `;
 
 export const StyledPartnersSection = styled.section`
+  width: 100%;
   max-width: ${({ theme }) => theme.breakpoints.desktop};
   margin: 3rem 0 8rem;
   background-color: #ffffff;
   border-radius: 23px;
-  padding: 1rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 3rem;
-  }
 
   ul {
     display: grid;
@@ -77,9 +74,10 @@ export const StyledPartnersSection = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 2rem;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-      padding: 3rem;
+      margin: 2rem;
       grid-template-columns: 1fr 1fr;
     }
 
