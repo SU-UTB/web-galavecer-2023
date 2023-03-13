@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useFetchFaculties from '../../hooks/useFetchFaculties';
 import { IFormNominationData } from '../../lib/interfaces/IFormNominationData';
 import {
   StyledForm,
@@ -22,6 +23,8 @@ const INITIAL_DATA: IFormNominationData = {
 
 const FormNomination = () => {
   const [data, setData] = useState<IFormNominationData>(INITIAL_DATA);
+  const { data: faculties, isLoading } = useFetchFaculties();
+
   const updateFields = (fields: Partial<IFormNominationData>) => {
     setData((prev) => {
       return { ...prev, ...fields };
@@ -71,12 +74,13 @@ const FormNomination = () => {
               updateFields({ facultyNominated: Number(e.target.value) })
             }
           >
-            <option value="0" disabled>
-              Fakulta nominovaného
-            </option>
-            <option value="1">FAI</option>
-            <option value="2">FMK</option>
-            <option value="3">FHS</option>
+            {isLoading && <option disabled>Fakulta nominovaného</option>}
+            {!isLoading &&
+              faculties?.map(({ id, faculty_name, faculty_abbrev }) => (
+                <option key={id} value={id}>
+                  {faculty_abbrev} - {faculty_name}
+                </option>
+              ))}
           </StyledSelect>
         </StyledFormRow>
         <StyledFormRow>
