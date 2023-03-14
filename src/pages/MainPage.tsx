@@ -12,7 +12,12 @@ const MainPage = () => {
     <>
       <MainHeading>
         <span className="hidden">Galavečer</span>
-        <MainLogoImg src={LogoImg} alt="Galavečer 2023 logo" />
+        <MainLogoImg
+          src={LogoImg}
+          alt="Galavečer 2023 logo"
+          width={441}
+          height={116}
+        />
         <span>Univerzity Tomáše Bati</span>
         <span>11.4.2023</span>
       </MainHeading>

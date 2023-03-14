@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
       background: linear-gradient(90deg, rgba(0, 0, 0, 0) -8.93%, rgba(0, 0, 0, 0.68) 31.15%, rgba(0, 0, 0, 0.68) 65.89%, rgba(0, 0, 0, 0) 110.18%), url(${bgDesktop}) no-repeat top;
       font-size: 22px;
+      background-size: cover;
     }
   }
 

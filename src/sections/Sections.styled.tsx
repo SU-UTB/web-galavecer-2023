@@ -62,7 +62,7 @@ export const StyledPersonalInfoSection = styled.section`
 export const StyledPartnersSection = styled.section`
   width: 100%;
   max-width: ${({ theme }) => theme.breakpoints.desktop};
-  margin: 3rem 0 5rem;
+  margin: 3rem 0 6rem;
   background-color: #ffffff;
   border-radius: 23px;
   padding: 2rem;

@@ -23,12 +23,6 @@ export const MainHeading = styled.h1`
     display: none;
   }
 
-  img {
-    filter: drop-shadow(0px 4px 100px #000000)
-      drop-shadow(0px 0px 250px #000000);
-    z-index: -1;
-  }
-
   span {
     position: relative;
     top: 20px;
