@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { api } from '../../api';
 import useFetchFaculties from '../../hooks/useFetchFaculties';
 import { IFormNominationData } from '../../lib/interfaces/IFormNominationData';
@@ -39,12 +40,11 @@ const FormNomination = () => {
       setSendingForm(true);
       const response = await api.post('nominations', data);
       if (response.status === 200) {
-        console.log('form successfully submited');
+        toast.success('Formulář úspěšně odeslán.');
         setData(INITIAL_DATA);
       }
     } catch (err) {
-      // TODO: handle error, set isSending to false
-      console.log(`An error occured: ${err}`);
+      toast.error('Stala se chyba');
     } finally {
       setSendingForm(false);
     }

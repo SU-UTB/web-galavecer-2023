@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -14,6 +15,7 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes />
+          <Toaster position="bottom-center" toastOptions={{ duration: 4000 }} />
         </Layout>
       </BrowserRouter>
     </ThemeProvider>
