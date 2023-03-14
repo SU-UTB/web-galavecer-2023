@@ -24,6 +24,8 @@ export const StyledForm = styled.form`
     background: #ffffff;
     border: none;
     margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-size: 18px;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
       min-width: 300px;
@@ -59,6 +61,7 @@ export const StyledInput = styled.input`
 
 export const StyledSelect = styled.select`
   width: 100%;
+  cursor: pointer;
 `;
 
 export const StyledTextarea = styled.textarea`
@@ -80,4 +83,5 @@ export const StyledSubmitButton = styled.button`
   border: none;
   max-width: 300px;
   align-self: flex-start;
+  cursor: pointer;
 `;
