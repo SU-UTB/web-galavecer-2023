@@ -7,7 +7,7 @@ export const MenuLogoLink = styled.a`
 
   img {
     width: auto;
-    max-height: 100px;
+    max-height: 40px;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -17,5 +17,9 @@ export const MenuLogoLink = styled.a`
 
 export const MainLogoImg = styled.img`
   width: auto;
-  height: 40vh;
+  height: auto;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 26vh;
+  }
 `;

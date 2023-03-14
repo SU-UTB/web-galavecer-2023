@@ -21,7 +21,7 @@ const Socials = () => {
         imgHeight={32}
       />
       <SocialItem
-        link="https://sunovy.utb.cz/"
+        link="https://sutb.cz/"
         imgSrc={suIcon}
         imgAlt="Studentska unie UTB"
         imgHeight={32}

@@ -1,11 +1,11 @@
 import BackArrowImg from '../../assets/img/icons/arrow-back.svg';
-import { StyledActionLink } from './StyledActionLink.styled';
+import { StyledBackLink } from './StyledActionLink.styled';
 
 const BackLink = () => {
   return (
-    <StyledActionLink to="/" desktopHidden={true}>
+    <StyledBackLink to="/">
       <img src={BackArrowImg} alt="šipka zpátky" />
-    </StyledActionLink>
+    </StyledBackLink>
   );
 };
 
