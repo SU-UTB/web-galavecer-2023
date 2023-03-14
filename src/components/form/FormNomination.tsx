@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { api } from '../../api';
+import useFetchCategories from '../../hooks/useFetchCategories';
 import useFetchFaculties from '../../hooks/useFetchFaculties';
 import { IFormNominationData } from '../../lib/interfaces/IFormNominationData';
 import {
@@ -16,8 +17,9 @@ import {
 const INITIAL_DATA: IFormNominationData = {
   firstName: '',
   lastName: '',
-  email: '',
+  emailNominated: '',
   facultyNominated: null,
+  categoryNominated: null,
   firstNameNominated: '',
   lastNameNominated: '',
   achievementsNominated: '',
@@ -26,6 +28,7 @@ const INITIAL_DATA: IFormNominationData = {
 const FormNomination = () => {
   const [data, setData] = useState<IFormNominationData>(INITIAL_DATA);
   const { data: faculties } = useFetchFaculties();
+  const { data: categories } = useFetchCategories();
   const [sendingForm, setSendingForm] = useState<boolean>(false);
 
   const updateFields = (fields: Partial<IFormNominationData>) => {
@@ -76,6 +79,19 @@ const FormNomination = () => {
           />
         </StyledFormRow>
         <StyledFormRow>
+          <StyledInput
+            type="email"
+            name="emailNominated"
+            id="emailNominated"
+            placeholder="Univerzitní e-mail nominovaného"
+            pattern=".+@utb\.cz"
+            title="Prosím, použijte univerznitní mail @utb.cz"
+            required
+            value={data.emailNominated}
+            onChange={(e) => updateFields({ emailNominated: e.target.value })}
+          />
+        </StyledFormRow>
+        <StyledFormRow>
           <StyledSelect
             name="facultyNominated"
             id="facultyNominated"
@@ -91,6 +107,26 @@ const FormNomination = () => {
             {faculties?.map(({ id, faculty_name, faculty_abbrev }) => (
               <option key={id} value={id}>
                 {faculty_abbrev} - {faculty_name}
+              </option>
+            ))}
+          </StyledSelect>
+        </StyledFormRow>
+        <StyledFormRow>
+          <StyledSelect
+            name="categoryNominated"
+            id="categoryNominated"
+            required
+            value={data.categoryNominated ?? ''}
+            onChange={(e) =>
+              updateFields({ categoryNominated: Number(e.target.value) })
+            }
+          >
+            <option disabled value="">
+              Kategorie nominovaného
+            </option>
+            {categories?.map(({ id, category_name, category_abbrev }) => (
+              <option key={id} value={id}>
+                {category_abbrev} - {category_name}
               </option>
             ))}
           </StyledSelect>
@@ -127,19 +163,6 @@ const FormNomination = () => {
             required
             value={data.lastName}
             onChange={(e) => updateFields({ lastName: e.target.value })}
-          />
-        </StyledFormRow>
-        <StyledFormRow>
-          <StyledInput
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Univerzitní e-mail"
-            pattern=".+@utb\.cz"
-            title="Prosím, použijte univerznitní mail @utb.cz"
-            required
-            value={data.email}
-            onChange={(e) => updateFields({ email: e.target.value })}
           />
         </StyledFormRow>
       </StyledFormGroup>
