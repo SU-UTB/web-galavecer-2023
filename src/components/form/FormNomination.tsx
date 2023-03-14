@@ -108,9 +108,9 @@ const FormNomination = () => {
             <option disabled value="">
               Fakulta nominovaného
             </option>
-            {faculties?.map(({ id, faculty_name, faculty_abbrev }) => (
+            {faculties?.map(({ id, name, abbrev }) => (
               <option key={id} value={id}>
-                {faculty_abbrev} - {faculty_name}
+                {abbrev} - {name}
               </option>
             ))}
           </StyledSelect>
@@ -128,9 +128,9 @@ const FormNomination = () => {
             <option disabled value="">
               Kategorie nominovaného
             </option>
-            {categories?.map(({ id, category_name, category_abbrev }) => (
+            {categories?.map(({ id, name }) => (
               <option key={id} value={id}>
-                {category_abbrev} - {category_name}
+                {name}
               </option>
             ))}
           </StyledSelect>
