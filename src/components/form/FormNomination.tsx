@@ -87,7 +87,7 @@ const FormNomination = () => {
           <StyledTextarea
             name="achievementsNominated"
             id="achievementsNominated"
-            placeholder="Dúvod k nominaci"
+            placeholder="Důvod k nominaci"
             required
             value={data.achievementsNominated}
             onChange={(e) =>
@@ -123,6 +123,8 @@ const FormNomination = () => {
             name="email"
             id="email"
             placeholder="Univerzitní e-mail"
+            pattern=".+@utb\.cz"
+            title="Prosím, použijte univerznitní mail @utb.cz"
             required
             value={data.email}
             onChange={(e) => updateFields({ email: e.target.value })}
