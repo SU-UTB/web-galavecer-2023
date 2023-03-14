@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { api } from '../../api';
 import useFetchFaculties from '../../hooks/useFetchFaculties';
 import { IFormNominationData } from '../../lib/interfaces/IFormNominationData';
 import {
@@ -15,7 +16,7 @@ const INITIAL_DATA: IFormNominationData = {
   firstName: '',
   lastName: '',
   email: '',
-  facultyNominated: 0,
+  facultyNominated: null,
   firstNameNominated: '',
   lastNameNominated: '',
   achievementsNominated: '',
@@ -23,7 +24,8 @@ const INITIAL_DATA: IFormNominationData = {
 
 const FormNomination = () => {
   const [data, setData] = useState<IFormNominationData>(INITIAL_DATA);
-  const { data: faculties, isLoading } = useFetchFaculties();
+  const { data: faculties } = useFetchFaculties();
+  const [sendingForm, setSendingForm] = useState<boolean>(false);
 
   const updateFields = (fields: Partial<IFormNominationData>) => {
     setData((prev) => {
@@ -31,12 +33,21 @@ const FormNomination = () => {
     });
   };
 
-  const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
-    // TODO: implement submit
+  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('form submitted:');
-    console.log(data);
-    setData(INITIAL_DATA);
+    try {
+      setSendingForm(true);
+      const response = await api.post('nominations', data);
+      if (response.status === 200) {
+        console.log('form successfully submited');
+        setData(INITIAL_DATA);
+      }
+    } catch (err) {
+      // TODO: handle error, set isSending to false
+      console.log(`An error occured: ${err}`);
+    } finally {
+      setSendingForm(false);
+    }
   };
 
   return (
@@ -69,18 +80,19 @@ const FormNomination = () => {
             name="facultyNominated"
             id="facultyNominated"
             required
-            value={data.facultyNominated}
+            value={data.facultyNominated ?? ''}
             onChange={(e) =>
               updateFields({ facultyNominated: Number(e.target.value) })
             }
           >
-            {isLoading && <option disabled>Fakulta nominovaného</option>}
-            {!isLoading &&
-              faculties?.map(({ id, faculty_name, faculty_abbrev }) => (
-                <option key={id} value={id}>
-                  {faculty_abbrev} - {faculty_name}
-                </option>
-              ))}
+            <option disabled value="">
+              Fakulta nominovaného
+            </option>
+            {faculties?.map(({ id, faculty_name, faculty_abbrev }) => (
+              <option key={id} value={id}>
+                {faculty_abbrev} - {faculty_name}
+              </option>
+            ))}
           </StyledSelect>
         </StyledFormRow>
         <StyledFormRow>
