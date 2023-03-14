@@ -43,6 +43,11 @@ const FormNomination = () => {
 
   const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!data.consent) {
+      return toast.error(
+        'K odeslání formulářu je nutné souhlasit se spracováním osobních údajů.',
+      );
+    }
     try {
       setSendingForm(true);
       const response = await api.post('nominations', data);
@@ -186,7 +191,9 @@ const FormNomination = () => {
           </StyledLabel>
         </StyledFormRow>
       </StyledFormGroup>
-      <StyledSubmitButton type="submit">Nominovat</StyledSubmitButton>
+      <StyledSubmitButton disabled={sendingForm} type="submit">
+        Nominovat
+      </StyledSubmitButton>
     </StyledForm>
   );
 };
