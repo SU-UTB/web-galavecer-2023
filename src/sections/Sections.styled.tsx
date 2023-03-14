@@ -10,6 +10,8 @@ export const StyledVoteSection = styled.section`
   p {
     text-align: center;
     letter-spacing: 2px;
+    font-family: ${({ theme }) => theme.fontFamilies.headlineRegular};
+    font-size: 16px;
   }
 `;
 
@@ -25,7 +27,7 @@ export const StyledRulesSection = styled.section`
       flex-wrap: wrap;
       gap: 0 2rem;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       max-width: ${({ theme }) => theme.breakpoints.desktop};
     }
     li {
@@ -42,6 +44,7 @@ export const StyledPersonalInfoSection = styled.section`
   max-width: ${({ theme }) => theme.breakpoints.desktop};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 0 2.5rem;
     height: 70vh;
     overflow-y: scroll;
   }
@@ -59,13 +62,18 @@ export const StyledPersonalInfoSection = styled.section`
 export const StyledPartnersSection = styled.section`
   width: 100%;
   max-width: ${({ theme }) => theme.breakpoints.desktop};
-  margin: 3rem 0 8rem;
+  margin: 3rem 0;
   background-color: #ffffff;
   border-radius: 23px;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin: 3rem 0 10rem;
+    padding: 3rem;
+  }
 
   ul {
     display: grid;
@@ -73,17 +81,22 @@ export const StyledPartnersSection = styled.section`
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      gap: 2rem;
       margin: 2rem;
       grid-template-columns: 1fr 1fr;
     }
 
     img {
       width: auto;
-      height: 50px;
+      height: 40px;
+
+      @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        height: 50px;
+      }
     }
   }
 `;

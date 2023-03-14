@@ -1,4 +1,4 @@
-import LogoImg from '../assets/img/logo.svg';
+import LogoImg from '../assets/img/logo-w.svg';
 import {
   MainHeading,
   SecondaryHeading,

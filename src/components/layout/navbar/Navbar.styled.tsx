@@ -21,11 +21,12 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   position: relative;
   flex-direction: column;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 2rem 0;
     flex-direction: row;
   }
 
