@@ -1,9 +1,11 @@
 export interface IFormNominationData {
   firstName: string;
   lastName: string;
-  email: string;
-  facultyNominated: number;
+  emailNominated: string;
+  facultyNominated: number | null;
+  categoryNominated: number | null;
   firstNameNominated: string;
   lastNameNominated: string;
   achievementsNominated: string;
+  consent: boolean;
 }
