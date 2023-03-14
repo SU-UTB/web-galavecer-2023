@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 import { api } from '../../api';
 import useFetchCategories from '../../hooks/useFetchCategories';
 import useFetchFaculties from '../../hooks/useFetchFaculties';
 import { IFormNominationData } from '../../lib/interfaces/IFormNominationData';
 import {
+  StyledCheckbox,
   StyledForm,
   StyledFormGroup,
   StyledFormRow,
   StyledInput,
+  StyledLabel,
   StyledSelect,
   StyledSubmitButton,
   StyledTextarea,
@@ -23,6 +26,7 @@ const INITIAL_DATA: IFormNominationData = {
   firstNameNominated: '',
   lastNameNominated: '',
   achievementsNominated: '',
+  consent: false,
 };
 
 const FormNomination = () => {
@@ -164,6 +168,22 @@ const FormNomination = () => {
             value={data.lastName}
             onChange={(e) => updateFields({ lastName: e.target.value })}
           />
+        </StyledFormRow>
+      </StyledFormGroup>
+      <StyledFormGroup>
+        <StyledFormRow>
+          <StyledCheckbox
+            type="checkbox"
+            name="consent"
+            id="consent"
+            required
+            checked={data.consent}
+            onChange={(e) => updateFields({ consent: !data.consent })}
+          />
+          <StyledLabel htmlFor="consent">
+            Souhlasím se spracováním&nbsp;
+            <Link to="/osobni-udaje">osobních&nbsp;údajů</Link>
+          </StyledLabel>
         </StyledFormRow>
       </StyledFormGroup>
       <StyledSubmitButton type="submit">Nominovat</StyledSubmitButton>

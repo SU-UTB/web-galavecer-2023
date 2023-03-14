@@ -7,4 +7,5 @@ export interface IFormNominationData {
   firstNameNominated: string;
   lastNameNominated: string;
   achievementsNominated: string;
+  consent: boolean;
 }

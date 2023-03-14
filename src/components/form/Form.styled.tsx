@@ -15,7 +15,8 @@ export const StyledForm = styled.form`
     padding: 0 2rem;
   }
 
-  input,
+  input[type='text'],
+  input[type='email'],
   select,
   textarea {
     padding: 0.8rem 0.5rem;
@@ -38,6 +39,7 @@ export const StyledFormGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem 0;
+  width: 100%;
 `;
 
 export const StyledFormRow = styled.div`
@@ -45,6 +47,7 @@ export const StyledFormRow = styled.div`
   flex-wrap: wrap;
   align-items: center;
   gap: 0;
+  justify-content: flex-start;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     gap: 0 1rem;
@@ -59,6 +62,14 @@ export const StyledInput = styled.input`
   }
 `;
 
+export const StyledCheckbox = styled.input`
+  width: auto;
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`;
+
 export const StyledSelect = styled.select`
   width: 100%;
   cursor: pointer;
@@ -66,6 +77,14 @@ export const StyledSelect = styled.select`
 
 export const StyledTextarea = styled.textarea`
   width: 100%;
+`;
+
+export const StyledLabel = styled.label`
+  cursor: pointer;
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
 `;
 
 export const StyledSubmitButton = styled.button`
