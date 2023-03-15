@@ -7,13 +7,17 @@ const PartnersSection = () => {
   return (
     <StyledPartnersSection id="partneri">
       <ul>
-        {partnerItems.map(({ imgSrc, imgAlt }: TPartnerItem) => (
+        {partnerItems.map(({ imgSrc, imgAlt, linkTo }: TPartnerItem) => (
           <li key={imgAlt}>
-            <img src={imgSrc} alt={imgAlt} />
+            <a href={linkTo} target="_blank" rel="noopener noreferrer">
+              <img src={imgSrc} alt={imgAlt} />
+            </a>
           </li>
         ))}
       </ul>
-      <img src={UTB} alt="Univerzita Tomáše Bati ve Zlíně" />
+      <a href="https://utb.cz/" target="_blank" rel="noopener noreferrer">
+        <img src={UTB} alt="Univerzita Tomáše Bati ve Zlíně" />
+      </a>
     </StyledPartnersSection>
   );
 };

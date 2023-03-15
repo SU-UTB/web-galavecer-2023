@@ -16,7 +16,7 @@ const RulesSection = () => {
         </li>
         <li>
           Pořadatel akce (Studentská unie UTB) si vyhrazuje právo vyřadit
-          nominace ty, které neodpovídají těmto pravidlům, nebo jsou vulgární či
+          nominace, které neodpovídají těmto pravidlům, nebo jsou vulgární či
           urážlivé.
         </li>
         <li>
