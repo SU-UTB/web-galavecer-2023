@@ -37,7 +37,7 @@ const RulesSection = () => {
           Pozn.: O těchto studentech rozhoduje vedení jednotlivých fakult.
         </li>
         <li>
-          Galavečer UTB 2022 má další 2 speciální kategorie:
+          Galavečer UTB 2023 má další 2 speciální kategorie:
           <br />
           <ImportantText>Sportovec UTB</ImportantText>
           <br />

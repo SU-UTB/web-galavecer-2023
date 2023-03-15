@@ -1,5 +1,4 @@
 import NominateLink from '../components/actionLink/NominateLink';
-import VoteLink from '../components/actionLink/VoteLink';
 import { StyledVoteSection } from './Sections.styled';
 
 const NominateSection = () => {
