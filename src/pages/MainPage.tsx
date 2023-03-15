@@ -19,7 +19,7 @@ const MainPage = () => {
           height={116}
         />
         <span>Univerzity Tomáše Bati</span>
-        <span>11.4.2023</span>
+        <span>11.&nbsp;4.&nbsp;2023</span>
       </MainHeading>
       <SecondaryHeading>Projdi se po červeném koberci!</SecondaryHeading>
       <NominateSection />

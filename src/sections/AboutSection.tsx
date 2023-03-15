@@ -7,7 +7,7 @@ const AboutSection = () => {
         <p>
           Galavečer UTB je společenská akce pořádaná Studentskou unií UTB a
           Univerzitou Tomáše Bati ve Zlíně. Letošní ročník se bude konat
-          11.4.2023 na Rektorátu UTB (budova U13).
+          11.&nbsp;4.&nbsp;2023 na Rektorátu UTB (budova U13).
         </p>
         <br />
         <p>
