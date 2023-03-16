@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import TLinkItem from '../../../lib/types/TLinkItem';
 import { NavListItem } from './NavItem.styled';
 
 const NavItem = ({ link, text }: TLinkItem) => {
   return (
     <NavListItem>
-      <a href={link}>{text}</a>
+      <Link to={link}>{text}</Link>
     </NavListItem>
   );
 };

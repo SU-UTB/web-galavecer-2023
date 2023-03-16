@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.header};
+  background: ${({ theme }) => theme.colors.header};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,11 +21,12 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   position: relative;
   flex-direction: column;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 2rem 0;
     flex-direction: row;
   }
 

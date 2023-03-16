@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
+type Props = {
+  imgHeight: number;
+};
+
 export const SocialsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+`;
 
-  a {
-    display: block;
-    margin: 0 1rem;
+export const StyledSocialItem = styled.a<Props>`
+  display: block;
+  margin: 0 1rem;
 
-    img {
-      width: 32px;
-      height: 32px;
-    }
+  img {
+    width: auto;
+    height: ${({ imgHeight }) => imgHeight}px;
   }
 `;
