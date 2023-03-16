@@ -9,6 +9,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   padding: 4rem 1rem;
+  gap: 2rem 0;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 4rem 2rem;
