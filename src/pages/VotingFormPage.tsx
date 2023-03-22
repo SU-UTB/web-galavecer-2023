@@ -4,6 +4,7 @@ import { VoteContainer } from '../components/vote/voteContainer/VoteContainer';
 
 import { voteItems } from '../sections/VoteSection.content';
 
+// TODO: get items from the db instead of using static data
 const VotingFormPage = () => {
   return (
     <>
