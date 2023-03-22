@@ -1,4 +1,4 @@
-import FormVoting from '../components/form/FormVoting';
+import FormVoting from '../components/form/FormModalVote';
 import VoteCard from '../components/vote/voteCard/VoteCard';
 import { VoteContainer } from '../components/vote/voteContainer/VoteContainer';
 
@@ -21,7 +21,6 @@ const VotingFormPage = () => {
           ),
         )}
       </VoteContainer>
-      <FormVoting />
     </>
   );
 };

@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
+interface InputProps {
+  bordered?: boolean;
+}
+
 export const StyledForm = styled.form`
   font-family: ${({ theme }) => theme.fontFamilies.headlineRegular};
   max-width: ${({ theme }) => theme.breakpoints.desktop};
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 4rem 0;
   gap: 3rem 0;
-  min-height: 60vh;
+  padding: 2rem;
   align-items: center;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 2rem;
-  }
+  background: #ffffff;
+  color: #000000;
+  border-radius: 23px;
 
   input[type='text'],
   input[type='email'],
@@ -23,7 +25,6 @@ export const StyledForm = styled.form`
     border-radius: 0.5rem;
     outline: none;
     background: #ffffff;
-    border: none;
     margin-bottom: 0.5rem;
     font-family: inherit;
     font-size: 18px;
@@ -54,12 +55,9 @@ export const StyledFormRow = styled.div`
   }
 `;
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<InputProps>`
   width: 100%;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: auto;
-  }
+  border: ${({ bordered }) => (bordered ? '2px solid black' : 'none')};
 `;
 
 export const StyledCheckbox = styled.input`
@@ -82,7 +80,7 @@ export const StyledTextarea = styled.textarea`
 export const StyledLabel = styled.label`
   cursor: pointer;
   a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: underline;
   }
 `;
@@ -91,15 +89,15 @@ export const StyledSubmitButton = styled.button`
   background: #ffffff;
   color: #000000;
   text-align: center;
-  padding: 1rem 1.8rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 23px;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
   font-family: ${({ theme }) => theme.fontFamilies.headlineSemibold};
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 600;
-  border: none;
+  border: 2px solid #000000;
   max-width: 300px;
   align-self: flex-start;
   cursor: pointer;
