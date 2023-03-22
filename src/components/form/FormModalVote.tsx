@@ -3,7 +3,7 @@ import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { api } from '../../api';
 import { IFormVoteData } from '../../lib/interfaces/IFormVoteData';
-import { TVoteItem } from '../../lib/types/TVoteItem';
+import { IVoteItem } from '../../lib/interfaces/IVoteItem';
 import ModalHeader from '../modal/ModalHeader';
 import { ModalOverlay } from '../modal/ModalOverlay.styled';
 import {
@@ -23,7 +23,7 @@ const INITIAL_DATA: IFormVoteData = {
 };
 
 interface Props {
-  voteItem: TVoteItem;
+  voteItem: IVoteItem;
   closeModalOnClick: () => void;
 }
 
@@ -63,7 +63,9 @@ const FormModalVote = ({ voteItem, closeModalOnClick }: Props) => {
       <StyledForm onSubmit={submitForm}>
         <ModalHeader closeModal={closeModalOnClick} />
         <StyledFormRow>
-          <p>Hlasovat za {voteItem.name}</p>
+          <p>
+            Hlasovat za: {voteItem.first_name} {voteItem.last_name}
+          </p>
         </StyledFormRow>
         <StyledFormGroup>
           <StyledFormRow>

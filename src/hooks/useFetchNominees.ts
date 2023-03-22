@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../api';
 import { IVoteItem } from '../lib/interfaces/IVoteItem';
 
-const useFetchCategories = () => {
+const useFetchNominees = () => {
   const [data, setData] = useState<IVoteItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -13,7 +13,7 @@ const useFetchCategories = () => {
     const getData = async () => {
       try {
         const { data } = await api.get('votes');
-        setData(data.categories);
+        setData(data.nominees);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {
@@ -33,4 +33,4 @@ const useFetchCategories = () => {
   return { data, isLoading, error };
 };
 
-export default useFetchCategories;
+export default useFetchNominees;

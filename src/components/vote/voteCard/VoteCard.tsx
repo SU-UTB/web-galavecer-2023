@@ -13,14 +13,13 @@ const VoteCard = (voteItem: IVoteItem) => {
     <>
       <StyledVoteCard>
         <div>
-          <img src={voteItem.facultyImg} alt={voteItem.facultyAbbrev} />
-          <h5>FAI</h5>
+          <h5>{voteItem.faculty.abbrev}</h5>
         </div>
-        <h4>{voteItem.name}</h4>
+        <h4>{voteItem.first_name}</h4>
         <p>
           {showMore
             ? voteItem.achievements
-            : `${voteItem.achievements.substring(0, 50)}`}
+            : `${voteItem.achievements[0].substring(0, 50)}`}
         </p>
         <ShowMoreButton onClick={() => setShowMore(!showMore)}>
           {showMore ? 'zobraz méně' : 'zobraz více'}
