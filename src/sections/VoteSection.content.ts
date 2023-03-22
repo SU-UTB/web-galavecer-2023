@@ -1,9 +1,8 @@
 import FAI from '../assets/img/icons/fai.svg';
-import { TVoteItem } from '../lib/types/TVoteItem';
-
+import { IVoteItem } from '../lib/interfaces/IVoteItem';
 // TODO: to be replaced with real data
 
-export const voteItems: TVoteItem[] = [
+export const voteItems: IVoteItem[] = [
   {
     id: 1,
     name: 'David Sedlar',

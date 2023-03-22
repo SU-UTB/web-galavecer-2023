@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { TVoteItem } from '../../../lib/types/TVoteItem';
+import { IVoteItem } from '../../../lib/interfaces/IVoteItem';
 import FormModalVote from '../../form/FormModalVote';
 import { ShowMoreButton } from './ShowMoreButton.styled';
 import { StyledVoteCard } from './StyledVoteCard.styled';
 import { VoteButton } from './VoteButton.styled';
 
-const VoteCard = (voteItem: TVoteItem) => {
+const VoteCard = (voteItem: IVoteItem) => {
   const [showMore, setShowMore] = useState<boolean>(false);
   const [isVoteFormOpen, setIsVoteFormOpen] = useState<boolean>(false);
 
