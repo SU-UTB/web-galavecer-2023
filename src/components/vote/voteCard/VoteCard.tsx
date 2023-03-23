@@ -20,8 +20,14 @@ const VoteCard = (voteItem: IVoteItem) => {
         </h4>
         <p>
           {showMore
-            ? voteItem.achievements.map(a => <p>{a}<br/><br/></p>)
-            : `${voteItem.achievements[0].substring(0, 50)}`}
+            ? voteItem.achievements.split('<br/>').map((a) => (
+                <p>
+                  {a}
+                  <br />
+                  <br />
+                </p>
+              ))
+            : `${voteItem.achievements.substring(0, 50)}`}
         </p>
         <ShowMoreButton onClick={() => setShowMore(!showMore)}>
           {showMore ? 'zobraz méně' : 'zobraz více'}

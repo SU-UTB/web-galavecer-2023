@@ -4,7 +4,7 @@ export interface IVoteItem {
   id: number | null;
   first_name: string;
   last_name: string;
-  achievements: string[];
+  achievements: string;
   faculty: IFacultyItem;
   faculty_id?: number;
   email?: string;
