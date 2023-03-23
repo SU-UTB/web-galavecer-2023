@@ -10,8 +10,6 @@ import VoteSection from '../sections/VoteSection';
 import { displayVoteSection } from '../utils/displayVoteSection';
 
 const MainPage = () => {
-  console.log(displayVoteSection);
-
   return (
     <>
       <MainHeading>
