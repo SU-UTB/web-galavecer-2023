@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
@@ -18,7 +19,7 @@ import {
 
 const INITIAL_DATA: IFormVoteData = {
   email: '',
-  voteId: null,
+  id: null,
   consent: false,
 };
 
@@ -39,6 +40,9 @@ const FormModalVote = ({ voteItem, closeModalOnClick }: Props) => {
 
   const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    updateFields({ id: Number(voteItem.id) });
+
     if (!data.consent) {
       return toast.error(
         'K odeslání formulářu je nutné souhlasit se spracováním osobních údajů.',
@@ -46,13 +50,22 @@ const FormModalVote = ({ voteItem, closeModalOnClick }: Props) => {
     }
     try {
       setSendingForm(true);
-      const response = await api.post('voting', data);
+      const response = await api.post('votes', data);
       if (response.status === 200) {
         toast.success('Formulář úspěšně odeslán.');
         setData(INITIAL_DATA);
       }
-    } catch (err) {
-      toast.error('Stala se chyba');
+    } catch (err: AxiosError | any) {
+      if (
+        err.response.data.error.toString() ===
+        'This email address has already been used!'
+      ) {
+        toast.error(
+          'Tento mail již byl použit. Nelze hlasovat více jak jednou.',
+        );
+      } else {
+        toast.error('Stala se chyba');
+      }
     } finally {
       setSendingForm(false);
     }

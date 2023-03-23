@@ -15,7 +15,9 @@ const VoteCard = (voteItem: IVoteItem) => {
         <div>
           <h5>{voteItem.faculty.abbrev}</h5>
         </div>
-        <h4>{voteItem.first_name}</h4>
+        <h4>
+          {voteItem.first_name} {voteItem.last_name}
+        </h4>
         <p>
           {showMore
             ? voteItem.achievements

@@ -4,10 +4,9 @@ import useFetchNominees from '../hooks/useFetchNominees';
 
 const VotingFormPage = () => {
   const { data: voteItems, isLoading, error } = useFetchNominees();
-  console.log(voteItems);
   return (
     <>
-      {isLoading && <p>loading...</p>}
+      {isLoading && <p>Nahrávám údaje...</p>}
       <VoteContainer>
         {Array.isArray(voteItems) &&
           voteItems.map(
