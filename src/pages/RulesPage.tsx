@@ -1,8 +1,8 @@
 import BackLink from '../components/actionLink/BackLink';
 import { SecondaryHeading } from '../components/headline/Headline.styled';
-import NominateSection from '../sections/NominateSection';
 import RulesSection from '../sections/RulesSection';
 import VoteSection from '../sections/VoteSection';
+import { displayVoteSection } from '../utils/displayVoteSection';
 
 const RulesPage = () => {
   return (
@@ -11,7 +11,7 @@ const RulesPage = () => {
         Pravidla nominací <br /> Galavečer 2023
       </SecondaryHeading>
       <RulesSection />
-      <VoteSection />
+      {displayVoteSection && <VoteSection />}
       <BackLink />
     </>
   );

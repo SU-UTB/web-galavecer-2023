@@ -10,8 +10,7 @@ export const StyledVoteCard = styled.div`
   flex-direction: column;
   gap: 1rem;
   flex-wrap: wrap;
-  min-width: 260px;
-  max-width: 280px;
+  width: 272px;
 
   p {
     font-size: 16px;

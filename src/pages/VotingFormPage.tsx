@@ -1,26 +1,26 @@
-import FormVoting from '../components/form/FormModalVote';
 import VoteCard from '../components/vote/voteCard/VoteCard';
 import { VoteContainer } from '../components/vote/voteContainer/VoteContainer';
+import useFetchNominees from '../hooks/useFetchNominees';
 
-import { voteItems } from '../sections/VoteSection.content';
-
-// TODO: get items from the db instead of using static data
 const VotingFormPage = () => {
+  const { data: voteItems, isLoading, error } = useFetchNominees();
   return (
     <>
+      {isLoading && <p>Nahrávám údaje...</p>}
       <VoteContainer>
-        {voteItems.map(
-          ({ id, name, facultyAbbrev, facultyImg, achievements }) => (
-            <VoteCard
-              key={id}
-              id={id}
-              name={name}
-              facultyAbbrev={facultyAbbrev}
-              facultyImg={facultyImg}
-              achievements={achievements}
-            />
-          ),
-        )}
+        {Array.isArray(voteItems) &&
+          voteItems.map(
+            ({ id, first_name, last_name, achievements, faculty }) => (
+              <VoteCard
+                key={id}
+                id={id}
+                first_name={first_name}
+                last_name={last_name}
+                achievements={achievements}
+                faculty={faculty}
+              />
+            ),
+          )}
       </VoteContainer>
     </>
   );

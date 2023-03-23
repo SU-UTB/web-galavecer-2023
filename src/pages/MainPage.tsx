@@ -4,9 +4,10 @@ import {
   SecondaryHeading,
 } from '../components/headline/Headline.styled';
 import { MainLogoImg } from '../components/logo/Logo.styled';
+import { DISABLE_VOTING_DATE } from '../lib/constants';
 import AboutSection from '../sections/AboutSection';
-import NominateSection from '../sections/NominateSection';
 import VoteSection from '../sections/VoteSection';
+import { displayVoteSection } from '../utils/displayVoteSection';
 
 const MainPage = () => {
   return (
@@ -23,7 +24,8 @@ const MainPage = () => {
         <span>11.&nbsp;4.&nbsp;2023</span>
       </MainHeading>
       <SecondaryHeading>Projdi se po červeném koberci!</SecondaryHeading>
-      <VoteSection />
+
+      {displayVoteSection && <VoteSection />}
       <AboutSection />
     </>
   );

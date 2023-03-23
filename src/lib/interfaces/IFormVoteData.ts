@@ -1,5 +1,5 @@
 export interface IFormVoteData {
   email: string;
-  voteId: number | null;
+  id: number | null;
   consent: boolean;
 }
