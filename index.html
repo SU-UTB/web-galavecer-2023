@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Galavečer 2023</title>
-    <meta
-      name="description"
-      content="Galavečer UTB je společenská akce pořádaná Studentskou unií UTB a Univerzitou Tomáše Bati ve Zlíně. Letošní ročník se bude konat 11.4.2023 na rektorátu utb (budova U13)."
-    />
-    <meta property="og:locale" content="cs_CZ" />
-    <meta property="og:url" content="http://galavecer.utb.cz/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Galavečer 2023" />
-    <meta
-      property="og:description"
-      content="Galavečer UTB je společenská akce pořádaná Studentskou unií UTB a Univerzitou Tomáše Bati ve Zlíně. Letošní ročník se bude konat 11.4.2023 na rektorátu utb (budova U13)."
-    />
-    <meta property="og:image" content="http://galavecer.utb.cz/og-image.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="theme-color" content="#F00000" />
+  <title>Galavečer 2023</title>
+  <meta name="description"
+    content="Galavečer UTB je společenská akce pořádaná Studentskou unií UTB a Univerzitou Tomáše Bati ve Zlíně. Letošní ročník se bude konat 11.4.2023 na rektorátu utb (budova U13)." />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:url" content="http://galavecer.utb.cz/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Galavečer 2023" />
+  <meta property="og:description"
+    content="Galavečer UTB je společenská akce pořádaná Studentskou unií UTB a Univerzitou Tomáše Bati ve Zlíně. Letošní ročník se bude konat 11.4.2023 na rektorátu utb (budova U13)." />
+  <meta property="og:image" content="http://galavecer.utb.cz/og-image.png" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <meta name="theme-color" content="#F00000" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGFM1326WE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EGFM1326WE');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WL94Z6R8');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL94Z6R8" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
