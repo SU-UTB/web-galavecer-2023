@@ -1,10 +1,9 @@
-name: Deploy website on main push
-
 on:
   push:
     branches:
       - main
-
+  workflow_dispatch:
+name: Deploy website on main push
 jobs:
   web-deploy:
     name: Deploy
@@ -12,24 +11,14 @@ jobs:
     steps:
       - name: Get latest code
         uses: actions/checkout@v3
+      - run: yarn install && yarn build
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v3
+      - name: Sync files  
+        uses: wangyucode/sftp-upload-action@v2.0.2
         with:
-          node-version: '16'
-
-      - name: Build Project
-        run: npm ci && npm run build
-
-      - name: List output files
-        run: find dist/ -print
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}  
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ env.FTP_PROTOCOL }}
-          local-dir: dist/
-          server-dir: www/
+          localDir: './dist/' 
+          remoteDir: './www/' 
+          exclude: '.git*,**/.git*,**/.git*/**,**/.idea*,**/.idea*/**.DS_Store' 
